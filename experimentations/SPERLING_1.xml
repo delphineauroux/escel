@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experimentation>
+	<nom>SPERLING_1</nom>
+	<ouverte>oui</ouverte>
+	<consignes>
+		<nombre_tests>1</nombre_tests>
+		<enonce>Recopiez les caractères affichés lors du stimulus.</enonce>
+	</consignes>
+	<parametres>
+		<nombre>1</nombre>
+	</parametres>
+	<deroulement>
+		<type_stimulus>
+			<type>lettres</type>
+		</type_stimulus>
+		<duree_stimulus>
+			<type>fixe</type>
+			<duree>50</duree>
+		</duree_stimulus>
+		<taille_stimulus>
+			<type>fixe</type>
+			<taille>
+				<nbrlignes>1</nbrlignes>
+				<nbrcolonnes>3</nbrcolonnes>
+			</taille>
+		</taille_stimulus>
+		<son>
+			<booleen>non</booleen>
+		</son>
+	</deroulement>
+	<reponses>
+		<zones_texte>
+			<type>taille_grille</type>
+		</zones_texte>
+		<touche>aucune</touche>
+		<bouton_fin>desactiver</bouton_fin>
+	</reponses>
+	<correction code='var _reponses = 0;%end_line%for (var i = 0 ; i %lt% reponses.length ; ++i)%end_line%{%end_line%%tab%if (reponses[i] instanceof Array)%end_line%%tab%{%end_line%%tab%%tab%for (var j = 0 ; j %lt% reponses[i].length ; ++j)%end_line%%tab%%tab%{%end_line%%tab%%tab%%tab%if (reponses[i][j] == stimulus[i][j])%end_line%%tab%%tab%%tab%{++_reponses;}%end_line%%tab%%tab%}%end_line%%tab%}%end_line%}%end_line%_reponses = _reponses * 100 / (stimulus.length * stimulus[0].length);%end_line%_reponses = Math.round(_reponses * 100) / 100;%end_line%return ({%quotemark%pourcentage_reponses%quotemark%: _reponses});' />
+</experimentation>

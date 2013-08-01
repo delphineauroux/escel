@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experimentation>
+	<nom>STROOP</nom>
+	<consignes>
+		<nombre_tests>5</nombre_tests>
+		<enonce>lire les &lt;b&gt;mots&lt;/b&gt; aussi rapidement que possible sans laisser une seule erreur non corrigée.</enonce>
+		<enonce>lire les &lt;b&gt;mots&lt;/b&gt; aussi rapidement que possible sans laisser une seule erreur non corrigée.</enonce>
+		<enonce>dénommer les &lt;b&gt;couleurs&lt;/b&gt; aussi rapidement que possible sans laisser une seule erreur non corrigée.</enonce>
+		<enonce>lire les &lt;b&gt;mots&lt;/b&gt; aussi rapidement que possible sans laisser une seule erreur non corrigée.</enonce>
+		<enonce>dénommer les &lt;b&gt;couleurs&lt;/b&gt; aussi rapidement que possible sans laisser une seule erreur non corrigée.</enonce>
+	</consignes>
+	<parametres>
+		<nombre>1</nombre>
+	</parametres>
+	<deroulement>
+		<type_stimulus>
+			<type>autre</type>
+			<code value='test' />
+		</type_stimulus>
+		<duree_stimulus>
+			<type>fixe</type>
+			<duree>50</duree>
+		</duree_stimulus>
+		<taille_stimulus>
+			<type>fixe</type>
+			<taille>
+				<nbrlignes>1</nbrlignes>
+				<nbrcolonnes>3</nbrcolonnes>
+			</taille>
+		</taille_stimulus>
+		<son>
+			<booleen>non</booleen>
+		</son>
+	</deroulement>
+	<reponses>
+		<zones_texte>
+			<type>taille_grille</type>
+		</zones_texte>
+		<touche>aucune</touche>
+		<bouton_fin>desactiver</bouton_fin>
+	</reponses>
+	<correction>
+		<code value='Test de code correction.%end_line%return TEST_CORRECTION);' />
+	</correction>
+</experimentation>
